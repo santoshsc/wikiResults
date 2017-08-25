@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Justified Nav Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/justified-nav.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="masthead">
+        <h3 class="text-muted">Project name</h3>
+
+        <nav class="navbar navbar-expand-md navbar-light bg-light rounded mb-3">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav text-md-center nav-justified w-100">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Downloads</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      
+
+      <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-12 col-md-9">
+          <p class="float-right d-md-none">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+          <div class="jumbotron">
+            <h1>Wikipedia Search</h1>
+            <p>Please enter input to search from wikipedia API using jQuery and Cross Domain AJAX call JSONP.</p>
+            <div>
+              <form>
+                <input type="text" name="wikiSearch" id="wikiSearch" />
+                <input type="submit" id="btnWikiSearch" value="Search" >
+              </form>
+            </div>
+          </div>
+          <hr />
+          <script id="result_template" type="text/x-handlebars-template">
+            <div class="row">
+            <div class="col-10">
+              {{#each this}}
+              <h3>{{title}}</h3>
+              <p>{{{snippet}}} </p>
+              {{/each}}
+            </div>
+          </div><!--/row-->
+          </script>
+          <div class="row hide" id="searchResultHead">
+            <div class="col-sm-4">
+              <h2>Search Results </h2>
+            </div>
+            
+            <div class="col-sm-3 text-right">
+              <p><a class="btn btn-secondary" href="#" role="button" id="btnSort">SORT</a></p>
+            </div>
+            
+          </div>
+          <div id="resultContainer"></div>
+        </div><!--/span-->
+
+        <div class="col-12 col-md-3 sidebar-offcanvas" id="sidebar">
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div><!--/span-->
+      </div><!--/row-->
+
+     
+
+    </div>
+
+      <!-- Site footer -->
+      <footer class="footer">
+        <p>&copy; Company 2017</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+    
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>
